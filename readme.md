@@ -1,9 +1,8 @@
 # Tool Check
-## Proyecto - Desarrollo de Software 1949
+## Proyecto - Arquitectura de Software
 #### Profesor
-- Aisner Jose Marrugo Juliao
+- Jairo Enrique Serrano Castaneda
 #### Estudiantes
-- Josué David Anichiarico correa T00069117
-- Jhonatan David Romani Teran T00068964
-- Daniel Villalba T00058442
-- Pedro José Castro T00067714
+- Daniel Villalba H. – T00058442
+- Luis Carlos Pacheco Aldana –T0065407
+- Santiago Bertel Alarcón – T00066057

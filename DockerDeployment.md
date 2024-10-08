@@ -1,4 +1,4 @@
-## Corre los siguientes en comandos en orden para correr el programa.
+## Corre los siguientes comandos en orden para correr el programa.
 
 1. `docker compose build`
 2. `docker stop $(docker ps -a -q)`

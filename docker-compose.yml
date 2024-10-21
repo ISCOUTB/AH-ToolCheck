@@ -1,7 +1,7 @@
 services:
   my-postgres:
     image: postgres:15
-    container_name: db
+    container_name: AH_ToolCheck_db
     environment:
      - POSTGRES_DB=${DATABASE_NAME}
      - POSTGRES_USER=${DATABASE_USER}
@@ -15,7 +15,7 @@ services:
 
   web:
     build: .
-    container_name: django
+    container_name: AH_ToolCheck_Web
     ports:
       - '8024:8000'
     volumes:

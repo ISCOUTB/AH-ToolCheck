@@ -12,6 +12,8 @@ services:
     - '5432:5432'
     volumes:
     - pg_data:/var/lib/postgresql/data
+    networks:
+    - ag
 
   web:
     build: .
@@ -29,6 +31,9 @@ services:
       - DATABASE_PORT=${DATABASE_PORT}
     depends_on:
       - my-postgres
+networks:
+  ag:
+    external: true
 
 volumes:
   pg_data:

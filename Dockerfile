@@ -20,7 +20,7 @@ RUN chmod 444 requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el resto del código
-COPY --chown=myuser:myuser .manage.py .
+COPY  manage.py .
 RUN chmod 444 manage.py
 
 # Cambia los permisos del directorio de trabajo para que no se pueda escribir

@@ -1,0 +1,10 @@
+# Ignorar archivos y carpetas sensibles
+.env
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.git/
+.secrets/
+keys/
+credentials/

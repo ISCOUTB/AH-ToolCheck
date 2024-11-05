@@ -60,7 +60,7 @@ class NotificationPreferenceView(LoginRequiredMixin, View):
     template_name = 'inventory/notification_preferences.html'
 
     def get(self, request):
-        preference, created = NotificationPreference.objects.get_or_create(user=request.user)
+        preference, _ = NotificationPreference.objects.get_or_create(user=request.user)
         form = NotificationPreferenceForm(instance=preference)
         return render(request, self.template_name, {'form': form})
 

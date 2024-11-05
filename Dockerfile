@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el resto del código, excluyendo los archivos especificados en .dockerignore
-COPY . .
+COPY manage.py .
 
 # Expone el puerto en el que corre la aplicación
 EXPOSE 8000

@@ -13,18 +13,14 @@ USER myuser
 # Copia solo el archivo de requerimientos primero para aprovechar el cacheo de capas
 COPY requirements.txt .
 
-# Cambia los permisos de lectura para el archivo de requerimientos
-RUN chmod 444 requirements.txt
-
 # Instala las dependencias
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt chmod 444 requirements.txt
 
 # Copia el resto del código
 COPY  manage.py .
-RUN chmod 444 manage.py
 
 # Cambia los permisos del directorio de trabajo para que no se pueda escribir
-RUN chmod -R a-w /app
+RUN chmod -R a-w /app 444 manage.py
 
 # Expon el puerto (si es necesario)
 EXPOSE 8000

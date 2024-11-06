@@ -19,9 +19,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia el resto del código
 COPY  manage.py .
 
-# Cambia los permisos del directorio de trabajo para que no se pueda escribir
-RUN chmod -R a-w /app 444 manage.py
-
 # Expon el puerto (si es necesario)
 EXPOSE 8000
 

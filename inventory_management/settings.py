@@ -11,24 +11,22 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 
-import os
 from pathlib import Path
-from dotenv import load_dotenv  # Importa load_dotenv si usas python-dotenv
 
-# Carga las variables del archivo .env
-load_dotenv()
-
-# Define BASE_DIR como antes
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Obtén la clave secreta desde las variables de entorno
-SECRET_KEY = os.getenv('SECRET_KEY')
 
-# Configura el modo DEBUG de forma segura
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# Agrega los hosts permitidos
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-w07&5gwrdk==i^43uy8szu2ftmy_-izw!_-((jd!p-e5l)whj6'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
 
 
 # Application definition

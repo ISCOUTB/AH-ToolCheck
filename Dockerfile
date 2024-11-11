@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia el resto del código
 COPY  manage.py .
 
-# Expon el puerto (si es necesario)
+# Exponer el puerto
 EXPOSE 8000
 
 # Comando para ejecutar el servidor de Django

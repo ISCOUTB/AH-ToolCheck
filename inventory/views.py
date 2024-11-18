@@ -24,7 +24,7 @@ class Dashboard(LoginRequiredMixin, View):
         )
 
         # This will either get the existing NotificationPreference or create one if it doesn't exist
-        preference, created = NotificationPreference.objects.get_or_create(user=request.user)
+        preference, _ = NotificationPreference.objects.get_or_create(user=request.user)
 
         if preference.notify_on_low_inventory and low_inventory.count() > 0:
             if low_inventory.count() > 1:
